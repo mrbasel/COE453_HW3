@@ -1,0 +1,60 @@
+swagger: "2.0"
+info: 
+  title: calcAPI
+  description: calculator api
+  version: 1.0.0
+
+host: crcalcapi.apigateway.ordinal-crowbar-414913.cloud.goog 
+basePath: /
+schemes:
+  - https
+  - http
+
+paths:
+  /add:
+    post:
+      operationId: add
+      summary: add X and Y
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://add-xo5ixgaica-uc.a.run.app
+
+  /sub:
+    post:
+      operationId: sub
+      summary: sub Y from X
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+      x-google-backend:
+        address: https://sub-xo5ixgaica-uc.a.run.app
+
+  /mul:
+      post:
+        operationId: mul
+        summary: multiply X and Y
+        produces:
+          - application/json
+        responses:
+          200:
+            description: OK
+        x-google-backend:
+          address: https://mul-xo5ixgaica-uc.a.run.app
+
+  /div:
+      post:
+        operationId: div
+        summary: divide X by Y
+        produces:
+          - application/json
+        responses:
+          200:
+            description: OK
+        x-google-backend:
+          address: https://div-xo5ixgaica-uc.a.run.app
